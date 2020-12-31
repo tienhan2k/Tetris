@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <a class="mainBTN" id="startBTN" onclick="return start()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="zoom">
+        <h2>let's play</h2>
+        <img src="Tetris_logo.png" style="width:160px;height:100px;" alt="TETRIS">
+      </div>
+    </a>
+
+    <div  class="mainBTN" id="re-startBTN" style="display: none;">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    
+      <h2 class="game-over">game over</h2>
+      <a onclick="return reStart()">   
+        <div class="zoom">
+          <h2 class="play-again">play again</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="main" id="main" style="display: none;">
+
+      <canvas id="game-board" width="290" height="580" ></canvas>
+
+      <footer id="footer" id="footer" style="display: none;">
+        <a class="control-btn" onclick="controlByBtn(1)">
+          <i class="fa fa-long-arrow-left"></i>
+        </a>
+        <a class="control-btn" onclick="controlByBtn(2)">
+          <i class="fa fa-repeat"></i>
+        </a>
+        <a class="control-btn" onclick="controlByBtn(3)">
+          <i class="fa fa-arrow-down"></i>
+        </a>
+        <a class="control-btn" onclick="controlByBtn(4)">
+          <i class="fa fa-long-arrow-right"></i>
+        </a>
+      </footer>
+
+      <div class="score-table" id="score-table">
+        <h3></h3>
+      </div>
+
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
